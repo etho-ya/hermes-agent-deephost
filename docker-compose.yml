@@ -14,3 +14,14 @@ services:
       - "8642:8642"
     # Для Gateway mode или запуска нужного процесса агента (по умолчанию может быть setup или gateway)
     command: ["gateway", "run"]
+
+  webui:
+    image: ghcr.io/nesquena/hermes-webui:latest
+    container_name: hermes-webui
+    restart: unless-stopped
+    ports:
+      - "8888:8000"
+    environment:
+      - GATEWAY_URL=http://hermes:8642
+    depends_on:
+      - hermes
