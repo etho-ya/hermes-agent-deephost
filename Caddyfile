@@ -1,0 +1,6 @@
+hermes-deephost.mooo.com {
+    basicauth / {
+        ab $2a$14$KMupm4K/cMSM8ZFCbGhHIuP2WyPmR.fQV4oZURkvA4K5E41j.jZiq
+    }
+    reverse_proxy hermes:9119
+}
