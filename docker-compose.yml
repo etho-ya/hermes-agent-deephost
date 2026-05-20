@@ -20,8 +20,11 @@ services:
     container_name: hermes-webui
     restart: unless-stopped
     ports:
-      - "8888:8000"
+      - "8888:8787"
+    volumes:
+      - ./webui-state:/app/state
     environment:
       - GATEWAY_URL=http://hermes:8642
+      - HERMES_WEBUI_STATE_DIR=/app/state
     depends_on:
       - hermes
