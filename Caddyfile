@@ -1,4 +1,5 @@
-hermes-deephost.mooo.com {
+hermes-deephost.mooo.com:9119 {
+    tls internal
     basicauth / {
         ab $2a$14$KMupm4K/cMSM8ZFCbGhHIuP2WyPmR.fQV4oZURkvA4K5E41j.jZiq
     }
